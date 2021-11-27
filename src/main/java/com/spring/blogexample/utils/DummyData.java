@@ -37,6 +37,7 @@ public class DummyData {
 
         postList.add(post1);
         postList.add(post2);
+        postList.add(post3);
 
         for(Post post: postList) {
             Post postSaved = blogexampleRepository.save(post);
