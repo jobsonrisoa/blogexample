@@ -4,9 +4,11 @@ import com.spring.blogexample.model.Post;
 import com.spring.blogexample.repository.BlogexampleRepository;
 import com.spring.blogexample.service.BlogexampleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class BlogexampleServiceImpl implements BlogexampleService {
 
     @Autowired

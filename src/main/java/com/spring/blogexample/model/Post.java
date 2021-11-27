@@ -18,6 +18,10 @@ public class Post {
     @NotBlank
     private String titulo;
 
+    @NotBlank
+    private String autor;
+
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate data;
 
@@ -40,6 +44,14 @@ public class Post {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
     public LocalDate getData() {
