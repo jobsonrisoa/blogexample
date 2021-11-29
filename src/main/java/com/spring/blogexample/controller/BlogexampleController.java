@@ -34,4 +34,9 @@ public class BlogexampleController {
         return mv;
     }
 
+    @RequestMapping(value ="/newpost", method = RequestMethod.GET)
+    public String getPostForm() {
+        return  "postForm";
+    }
+
 }
