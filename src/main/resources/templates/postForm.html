@@ -37,8 +37,8 @@
         </nav>
 
         <div>
-            <th:block th:replace="mensagemValidacao"></th:block>
-            <form method="post">
+            <th:block th:include="mensagemValidacao"></th:block>
+            <form method="post"> <!--action="#" th:action="@{/newpost}" th:object="${post}"-->
                 <div class="form-group">
                     <input type="text" class="form-control" name="titulo" placeholder="Título *" style="margin-top: 5px;">
                 </div>

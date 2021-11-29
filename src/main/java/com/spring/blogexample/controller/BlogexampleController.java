@@ -40,7 +40,7 @@ public class BlogexampleController {
 
     @RequestMapping(value ="/newpost", method = RequestMethod.GET)
     public String getPostForm() {
-        return  "postForm";
+        return "postForm";
     }
 
     @RequestMapping(value ="/newpost", method = RequestMethod.POST)
