@@ -16,7 +16,7 @@
     <nav class="navbar navbar-light bg-light">
         <span class="navbar-brand mb-0 h1"
               style="font-weight: bold;
-                             margin-right: 20px;">My Blog Example</span>
+                     margin-left: 20px;">My Blog Example</span>
     </nav>
 </header>
 
@@ -35,26 +35,26 @@
             </ol>
         </nav>
 
-        <div class="card shadow-sm bg-white rounded" style="margin-top: 20px;" th:each="post : ${posts}">
-            <div class="card-body">
+        <div>
+            <form method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="titulo" placeholder="Título *" style="margin-top: 5px;">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="autor" placeholder="Autor *" style="margin-top: 5px;">
+                </div>
 
-                <p class="card-subtitle mb-2 text-muted" style="font-size: 0.8rem;">
-                    <span th:text="${post.autor}" ></span>
-                    <span th:text="${post.data}" ></span>
-                </p>
+                <textarea type="text" class="form-control" name="texto" placeholder="Texto *" style="margin-top: 5px;"></textarea>
 
-                <a th:href="@{/posts/{id}(id=${post.id})}" >
-                    <h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;">
-                        <span th:text="${post.titulo}"></span>
-                    </h4>
-                </a>
+                <small class="form-text text-muted">(*) Campos obrigatórios</small>
 
-                <p class="text">
-                    <span th:utext="${#strings.abbreviate(post.texto, 400)}"></span>
-                </p>
+                <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Publicar</button>
+                <a href="/posts" class="btn btn-light" role="button" style="margin-top: 10px;">Cancelar</a>
+<!--            <a href="/posts" class="btn btn-light" role="button" style="margin-top: 10px;">Cancelar</a>-->
 
-            </div>
+            </form>
         </div>
+
     </div>
 </section>
 
