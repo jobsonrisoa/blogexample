@@ -43,16 +43,16 @@ public class BlogexampleController {
         return "postForm";
     }
 
-//    @RequestMapping(value ="/newpost", method = RequestMethod.POST)
-//    public String savePost(@Valid Post post, BindingResult result, RedirectAttributes attributes) {
-//        if(result.hasErrors()) {
-//            attributes.addFlashAttribute("mensagem", "Verifique se os campos obrigatórios foram preenchidos");
-//            return "redirect:/newpost";
-//        }
-//        post.setData(LocalDate.now());
-//        blogexampleService.save(post);
-//        return "redirect:/posts";
-//    }
+    @RequestMapping(value ="/newpost", method = RequestMethod.POST)
+    public String savePost(@Valid Post post, BindingResult result, RedirectAttributes attributes) {
+        if(result.hasErrors()) {
+            attributes.addFlashAttribute("mensagem", "Verifique se os campos obrigatórios foram preenchidos!");
+            return "redirect:/newpost";
+        }
+        post.setData(LocalDate.now());
+        blogexampleService.save(post);
+        return "redirect:/posts";
+    }
 
 
 }
