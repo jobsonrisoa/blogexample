@@ -7,7 +7,7 @@ import java.util.List;
 public interface BlogexampleService {
 
     List<Post> findAll();
-    Post findByID(long id);
+    Post findById(long id);
     Post save(Post post);
 
 

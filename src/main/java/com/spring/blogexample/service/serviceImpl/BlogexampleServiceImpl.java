@@ -20,7 +20,7 @@ public class BlogexampleServiceImpl implements BlogexampleService {
     }
 
     @Override
-    public Post findByID(long id) {
+    public Post findById(long id) {
         return blogexampleRepository.findById(id).get();
     }
 
